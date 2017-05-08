@@ -20,7 +20,7 @@ RUN apt-get install -y monodevelop
 
 # ================= #
 
-# ==== Steam user ==== #
+# ==== Gta user ==== #
 RUN adduser \
 	--disabled-login \
 	--shell /bin/bash \
