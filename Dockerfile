@@ -12,7 +12,8 @@ MAINTAINER privateHeberg
 
 # ==== Paquets ==== #
 RUN apt-get update &&\
-    apt-get upgrade -y
+    apt-get upgrade -y &&\
+    apt-get install -y curl && p7zip-full
 
 RUN apt-get install -y monodevelop
 
