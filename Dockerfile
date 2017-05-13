@@ -41,12 +41,8 @@ RUN chown gta -R /data && chmod 755 -R /data
 VOLUME  /data
 WORKDIR /data
 # ================= #
-RUN cd /data
-
 
 RUN wget http://cdn.privateheberg.com/GTA/serveur-gta.zip && unzip serveur-gta.zip && cd serveur-gta
-
-RUN ls
 
 
 RUN chmod +x run.sh
