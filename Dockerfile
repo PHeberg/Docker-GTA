@@ -45,9 +45,11 @@ RUN cd /data
 
 RUN curl -O http://updater.fivereborn.com/client/cfx-server.7z
 
-RUN mkdir fivem-server && 7za x cfx-server.7z && mv cfx-server/* fivem-server && rm -r cfx-server
+RUN wget http://cdn.privateheberg.com/GTA/serveur-gta.zip
 
-RUN cd fivem-server
+RUN unzip serveur-gta.zip
+
+RUN cd serveur-gta.zip
 
 RUN chmod +x run.sh
 
