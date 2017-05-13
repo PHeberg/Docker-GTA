@@ -31,7 +31,6 @@ RUN usermod -a -G sudo gta
 
 # ==== Scripts ==== #
 RUN touch /root/.bash_profile
-RUN chmod 777 /home/gta/run.sh
 RUN mkdir  /data
 RUN chown gta -R /data && chmod 755 -R /data
 # ================= #
