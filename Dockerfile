@@ -46,6 +46,9 @@ RUN cd /data
 
 RUN wget http://cdn.privateheberg.com/GTA/serveur-gta.zip && unzip serveur-gta.zip && cd serveur-gta
 
+RUN ls
+
+
 RUN chmod +x run.sh
 
 ENTRYPOINT ["/home/gta/run.sh"]
