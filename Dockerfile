@@ -13,7 +13,6 @@ MAINTAINER privateHeberg
 # ==== Paquets ==== #
 RUN apt-get update &&\
     apt-get upgrade -y &&\
-    apt-get install -y curl &&\
     apt-get install -y p7zip-full
 
 RUN apt-get install -y monodevelop
@@ -43,7 +42,6 @@ WORKDIR /data
 # ================= #
 RUN cd /data
 
-RUN curl -O http://updater.fivereborn.com/client/cfx-server.7z
 
 RUN wget http://cdn.privateheberg.com/GTA/serveur-gta.zip
 
