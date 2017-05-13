@@ -41,14 +41,14 @@ RUN chown gta -R /data && chmod 755 -R /data
 VOLUME  /data
 WORKDIR /data
 # ================= #
-cd /data
+RUN cd /data
 
-curl -O http://updater.fivereborn.com/client/cfx-server.7z
+RUN curl -O http://updater.fivereborn.com/client/cfx-server.7z
 
-mkdir fivem-server && 7za x cfx-server.7z && mv cfx-server/* fivem-server && rm -r cfx-server
+RUN mkdir fivem-server && 7za x cfx-server.7z && mv cfx-server/* fivem-server && rm -r cfx-server
 
-cd fivem-server
+RUN cd fivem-server
 
-chmod +x run.sh
+RUN chmod +x run.sh
 
 ENTRYPOINT ["/home/gta/run.sh"]
