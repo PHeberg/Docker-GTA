@@ -14,7 +14,7 @@ MAINTAINER privateHeberg
 RUN apt-get update &&\
     apt-get upgrade -y &&\
     apt-get install -y wget &&\
-    apt-get install -y p7zip-full
+    apt-get install -y unzip
 
 RUN apt-get install -y monodevelop
 
