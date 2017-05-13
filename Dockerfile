@@ -44,11 +44,7 @@ WORKDIR /data
 RUN cd /data
 
 
-RUN wget http://cdn.privateheberg.com/GTA/serveur-gta.zip && unzip serveur-gta.zip
-
-
-
-RUN cd serveur-gta.zip
+RUN wget http://cdn.privateheberg.com/GTA/serveur-gta.zip && unzip serveur-gta.zip && cd serveur-gta.zip
 
 RUN chmod +x run.sh
 
