@@ -30,7 +30,6 @@ RUN usermod -a -G sudo gta
 # ==================== #
 
 # ==== Scripts ==== #
-COPY run.sh /home/gta/run.sh
 RUN touch /root/.bash_profile
 RUN chmod 777 /home/gta/run.sh
 RUN mkdir  /data
@@ -44,7 +43,4 @@ WORKDIR /data
 
 RUN wget http://cdn.privateheberg.com/GTA/serveur-gta.zip && unzip serveur-gta.zip && cd serveur-gta
 
-
-RUN chmod +x run.sh
-
-ENTRYPOINT ["/home/gta/run.sh"]
+ENTRYPOINT ["/home/gta/serveur-gta/run.sh"]
