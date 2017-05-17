@@ -42,4 +42,4 @@ WORKDIR /data
 
 RUN wget http://cdn.privateheberg.com/GTA/serveur-gta.zip && unzip serveur-gta.zip && cd serveur-gta
 
-ENTRYPOINT ["/home/gta/serveur-gta/run.sh"]
+ENTRYPOINT ["run.sh"]
