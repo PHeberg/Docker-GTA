@@ -43,4 +43,4 @@ WORKDIR /data
 RUN wget http://cdn.privateheberg.com/GTA/serveur-gta.zip && unzip serveur-gta.zip && cd serveur-gta
 RUN chmod -R 777 /home/gta
 
-CMD  ["PHgta.sh"]
+CMD ["/home/gta/serveur-gta/PHgta.sh"]
