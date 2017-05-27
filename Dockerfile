@@ -31,14 +31,13 @@ RUN usermod -a -G sudo gta
 
 # ==== Scripts ==== #
 RUN touch /root/.bash_profile
-RUN mkdir  /data
+RUN mkdir /data
+COPY start.sh /home/gta/start.sh
 RUN chown gta -R /data && chmod 777 -R /data
-COPY start.sh /data/start.sh
-RUN chmod 777 /data/start.sh
 # ================= #
 
 # ==== Volumes ==== #
-VOLUME  /data
+VOLUME /data
 WORKDIR /data
 # ================= #
 
@@ -47,4 +46,4 @@ EXPOSE $PORT
 EXPOSE $PORT_COUCHDB
 # ================= #
 
-ENTRYPOINT ["/data/start.sh"]
+ENTRYPOINT ["/home/gta/start.sh"]
