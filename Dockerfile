@@ -47,4 +47,4 @@ EXPOSE $PORT
 EXPOSE $PORT_COUCHDB
 # ================= #
 
-ENTRYPOINT ["/start.sh"]
+ENTRYPOINT ["/data/start.sh"]
