@@ -20,8 +20,7 @@ RUN apt-get update &&\
 
 
 
-RUN wget https://download.mono-project.com/sources/mono/mono-4.8.1.0.tar.bz2
-RUN tar xvjf mono-4.8.1.0.tar.bz2
+RUN wget https://download.mono-project.com/sources/mono/mono-4.8.1.0.tar.bz2 && tar xvjf mono-4.8.1.0.tar.bz2
 RUN cd mono-4.8.1
 RUN ./configure
 RUN make
