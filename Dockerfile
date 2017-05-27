@@ -25,6 +25,7 @@ RUN apt-get update &&\
     apt-get install -y libtool &&\
     apt-get install -y gettext &&\
     apt-get install -y cmake &&\
+    apt-get install -y python2.7 &&\
     apt-get install -y build-essential
 
 # ================= #
