@@ -33,6 +33,7 @@ RUN usermod -a -G sudo gta
 RUN touch /root/.bash_profile
 RUN mkdir /data
 COPY start.sh /home/gta/start.sh
+RUN chmod 777 /home/gta/start.sh
 RUN chown gta -R /data && chmod 777 -R /data
 # ================= #
 
