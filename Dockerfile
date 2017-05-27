@@ -17,7 +17,8 @@ RUN apt-get update &&\
     apt-get install -y wget &&\
     apt-get install -y unzip &&\
     apt-get install -y make &&\
-    apt install bzip2
+    apt install -y bzip2 &&\
+    apt install -y gcc
 
 # ================= #
 
