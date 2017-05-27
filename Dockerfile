@@ -18,13 +18,6 @@ RUN apt-get update &&\
     apt-get install -y unzip &&\
     apt-get install -y make
 
-
-
-RUN wget https://download.mono-project.com/sources/mono/mono-4.8.1.0.tar.bz2 && tar xvf mono-4.8.1.0.tar.bz2
-RUN cd mono-4.8.1
-RUN ./configure
-RUN make
-RUN make install
 # ================= #
 
 # ==== Gta user ==== #
