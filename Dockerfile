@@ -16,7 +16,7 @@ RUN apt-get update &&\
     apt-get upgrade -y &&\
     apt-get install -y wget &&\
     apt-get install -y unzip &&\
-    apt-get install -y make &&\
+    apt-get install -y make
 
 
 
