@@ -20,7 +20,12 @@ RUN apt-get update &&\
     apt install -y bzip2 &&\
     apt install -y g++ &&\
     apt install -y cmake &&\
-    apt install -y gcc
+    apt install -y gcc &&\
+    apt-get install -y automake &&\
+    apt-get install -y libtool &&\
+    apt-get install -y gettext &&\
+    apt-get install -y cmake &&\
+    apt-get install -y build-essential
 
 # ================= #
 
