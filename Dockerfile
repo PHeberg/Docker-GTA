@@ -7,7 +7,8 @@ FROM debian:8
 MAINTAINER privateHeberg
 
 # ==== Variables ==== #
-# === Non necessaire pour le moment ===#
+ENV PORT_COUCHDB=1025
+ENV PORT=1024
 # =================== #
 
 # ==== Paquets ==== #
@@ -32,7 +33,9 @@ RUN usermod -a -G sudo gta
 # ==== Scripts ==== #
 RUN touch /root/.bash_profile
 RUN mkdir  /data
-RUN chown gta -R /data && chmod 755 -R /data
+RUN chown gta -R /data && chmod 777 -R /data
+RUN wget https://cdn.privateheberg.com/GTA/serveur-gta.zip -P /data && unzip /data/serveur-gta.zip
+RUN chmod -R 777 /data
 # ================= #
 
 # ==== Volumes ==== #
@@ -40,7 +43,4 @@ VOLUME  /data
 WORKDIR /data
 # ================= #
 
-RUN wget https://cdn.privateheberg.com/GTA/serveur-gta.zip && unzip serveur-gta.zip && cd serveur-gta
-RUN chmod -R 777 /home/gta
-
-CMD ["/home/gta/serveur-gta/PHgta.sh"]
+CMD ["/data/serveur-gta/PHgta.sh"]
