@@ -18,6 +18,7 @@ RUN apt-get update &&\
     apt-get install -y unzip &&\
     apt-get install -y make &&\
     apt install -y bzip2 &&\
+    apt install -y g++ &&\
     apt install -y gcc
 
 # ================= #
