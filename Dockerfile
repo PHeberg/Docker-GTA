@@ -15,9 +15,17 @@ ENV PORT=1024
 RUN apt-get update &&\
     apt-get upgrade -y &&\
     apt-get install -y wget &&\
-    apt-get install -y unzip
+    apt-get install -y unzip &&\
+    apt-get install -y make &&\
 
-RUN apt-get install -y monodevelop
+
+
+RUN wget https://download.mono-project.com/sources/mono/mono-4.8.1.0.tar.bz2
+RUN tar xvjf mono-4.8.1.0.tar.bz2
+RUN cd mono-4.8.1
+RUN ./configure
+RUN make
+RUN make install
 # ================= #
 
 # ==== Gta user ==== #
