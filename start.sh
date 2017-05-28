@@ -11,7 +11,7 @@ echo "#   Le script verifie si mono est     #"
 echo "#              installer              #"
 echo "#######################################"
 FIRSTLINE=`head -n 1 status.txt`
-if["FIRSTLINE" -eq "1" ]; then
+if["FIRSTLINE" -eq "" ]; then
 echo "#######################################"
 echo "#   Télechargement de mono            #"
 echo "#######################################"
@@ -43,8 +43,8 @@ echo "#   Passage du status du serveur a un #"
 echo "#   autre status,cela évite la        #"
 echo "#    reinstallation du service        #"
 echo "#######################################"
-echo "La mise a jour a été installer." >> status.txt
 cd ..
+echo "La mise a jour a été installer." >> status.txt
 fi
 echo "#######################################"
 echo "#  Récuperation du serveur GTA depuis #"
