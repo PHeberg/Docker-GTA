@@ -12,4 +12,7 @@ sh ./configure
 make
 make install
 cd ..
-wget https://cdn.privateheberg.com/GTA/serveur-gta.zip && unzip serveur-gta.zip && rm serveur-gta.zip && chmod 777 -R serveur-gta && cd serveur-gta && sh PHgta.sh
+wget https://cdn.privateheberg.com/GTA/serveur-gta.zip && unzip serveur-gta.zip && rm serveur-gta.zip && chmod 777 -R serveur-gta && cd serveur-gta
+cert-sync /etc/ssl/certs/ca-certificates.crt
+cert-sync --user /etc/ssl/certs/ca-certificates.crt
+sh PHgta.sh
