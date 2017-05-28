@@ -8,7 +8,7 @@ MAINTAINER privateHeberg
 
 # ==== Variables ==== #
 ENV PORT_COUCHDB=1025
-ENV PORT=1024
+ENV PORT=30120
 # =================== #
 
 # ==== Paquets ==== #
