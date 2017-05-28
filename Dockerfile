@@ -57,4 +57,5 @@ EXPOSE $PORT
 EXPOSE $PORT_COUCHDB
 # ================= #
 
+RUN touch status.txt
 ENTRYPOINT ["/home/gta/start.sh"]
