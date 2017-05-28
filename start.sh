@@ -11,7 +11,8 @@ echo "#   Le script verifie si mono est     #"
 echo "#              installer              #"
 echo "#######################################"
 FIRSTLINE=`head -n 1 status.txt`
-if["FIRSTLINE" -eq "" ]; then
+if["FIRSTLINE" -eq "" ]
+then
 echo "#######################################"
 echo "#   Télechargement de mono            #"
 echo "#######################################"
@@ -37,7 +38,6 @@ echo "#               de mono.              #"
 echo "#######################################"
 cert-sync /etc/ssl/certs/ca-certificates.crt
 cert-sync --user /etc/ssl/certs/ca-certificates.crt
-
 echo "#######################################"
 echo "#   Passage du status du serveur a un #"
 echo "#   autre status,cela évite la        #"
