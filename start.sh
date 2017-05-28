@@ -10,8 +10,7 @@ echo "#######################################"
 echo "#   Le script verifie si mono est     #"
 echo "#              installer              #"
 echo "#######################################"
-FIRSTLINE=`head -n 1 status.txt`
-if [ "FIRSTLINE" -eq "" ];then
+if [ mono --version -eq "-bash: mono: command not found" ];then
 echo "#######################################"
 echo "#   Télechargement de mono            #"
 echo "#######################################"
@@ -43,7 +42,6 @@ echo "#   autre status,cela évite la        #"
 echo "#    reinstallation du service        #"
 echo "#######################################"
 cd ..
-echo "La mise a jour a été installer." >> status.txt
 fi
 echo "#######################################"
 echo "#  Récuperation du serveur GTA depuis #"
