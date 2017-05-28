@@ -46,8 +46,15 @@ echo "#######################################"
 echo "La mise a jour a été installer." >> status.txt
 cd ..
 fi
-
-
+echo "#######################################"
+echo "#  Récuperation du serveur GTA depuis #"
+echo "#   notre CDN                         #"
+echo "#######################################"
 wget https://cdn.privateheberg.com/GTA/serveur-gta.zip && unzip serveur-gta.zip && rm serveur-gta.zip && chmod 777 -R serveur-gta && cd serveur-gta
 chmod 777 PHgta.sh
+echo "#######################################"
+echo "#   Le serveur démarre.               #"
+echo "#   Vous utiliser actuellement la     #"
+echo "# dev-build du systeme de serveur gta #"
+echo "#######################################"
 sh PHgta.sh
