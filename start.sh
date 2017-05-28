@@ -10,7 +10,8 @@ echo "#######################################"
 echo "#   Le script verifie si mono est     #"
 echo "#              installer              #"
 echo "#######################################"
-if [ "mono --version" -eq "-bash: mono: command not found" ];then
+if ! [ -x "$(command -v mono)" ]; then
+echo 'Error: mono is not installed.' >&2
 echo "#######################################"
 echo "#   Télechargement de mono            #"
 echo "#######################################"
@@ -42,6 +43,8 @@ echo "#   autre status,cela évite la        #"
 echo "#    reinstallation du service        #"
 echo "#######################################"
 cd ..
+else
+  echo 'mono is installed'
 fi
 echo "#######################################"
 echo "#  Récuperation du serveur GTA depuis #"
