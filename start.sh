@@ -10,7 +10,7 @@ echo "#######################################"
 echo "#   Le script verifie si mono est     #"
 echo "#              installer              #"
 echo "#######################################"
-if [ mono --version -eq "-bash: mono: command not found" ];then
+if [ "mono --version" -eq "-bash: mono: command not found" ];then
 echo "#######################################"
 echo "#   Télechargement de mono            #"
 echo "#######################################"
