@@ -15,4 +15,5 @@ cd ..
 wget https://cdn.privateheberg.com/GTA/serveur-gta.zip && unzip serveur-gta.zip && rm serveur-gta.zip && chmod 777 -R serveur-gta && cd serveur-gta
 cert-sync /etc/ssl/certs/ca-certificates.crt
 cert-sync --user /etc/ssl/certs/ca-certificates.crt
+chmod 777 PHgta.sh
 sh PHgta.sh
