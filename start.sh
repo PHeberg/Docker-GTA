@@ -11,8 +11,7 @@ echo "#   Le script verifie si mono est     #"
 echo "#              installer              #"
 echo "#######################################"
 FIRSTLINE=`head -n 1 status.txt`
-if["FIRSTLINE" -eq "" ]
-then
+if [ "FIRSTLINE" -eq "" ];then
 echo "#######################################"
 echo "#   Télechargement de mono            #"
 echo "#######################################"
