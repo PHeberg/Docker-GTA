@@ -37,11 +37,6 @@ echo "#               de mono.              #"
 echo "#######################################"
 cert-sync /etc/ssl/certs/ca-certificates.crt
 cert-sync --user /etc/ssl/certs/ca-certificates.crt
-echo "#######################################"
-echo "#   Passage du status du serveur a un #"
-echo "#   autre status,cela évite la        #"
-echo "#    reinstallation du service        #"
-echo "#######################################"
 cd ..
 else
   echo 'mono is installed'
