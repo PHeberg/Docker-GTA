@@ -6,9 +6,6 @@
 FROM debian:8
 MAINTAINER privateHeberg
 
-# ==== Variables ==== #
-# Unused
-# =================== #
 
 # ==== Paquets ==== #
 RUN apt-get update &&\
@@ -50,9 +47,5 @@ RUN chown gta -R /data && chmod 777 -R /data
 VOLUME /data
 WORKDIR /data
 # ================= #
-
-# ==== Volumes ==== #
-EXPOSE $PORT
-EXPOSE $PORT_COUCHDB
-# ================= #
+S
 ENTRYPOINT ["/home/gta/start.sh"]
