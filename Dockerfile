@@ -7,8 +7,7 @@ FROM debian:8
 MAINTAINER privateHeberg
 
 # ==== Variables ==== #
-ENV PORT_COUCHDB=1025
-ENV PORT=30120
+# Unused
 # =================== #
 
 # ==== Paquets ==== #
