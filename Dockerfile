@@ -47,5 +47,5 @@ RUN chown gta -R /data && chmod 777 -R /data
 VOLUME /data
 WORKDIR /data
 # ================= #
-S
+
 ENTRYPOINT ["/home/gta/start.sh"]
