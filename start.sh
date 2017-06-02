@@ -54,4 +54,4 @@ echo "#   Le serveur démarre.               #"
 echo "#   Vous utiliser actuellement la     #"
 echo "# dev-build du systeme de serveur gta #"
 echo "#######################################"
-screen -s -d -m PHgta.sh
+screen -S GTASERVER -dm bash -c "sh PHgta.sh"
