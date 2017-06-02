@@ -7,7 +7,7 @@ FROM debian:8
 MAINTAINER privateHeberg
 
 # ==== Variables ==== #
-ENV PORT=30120 
+ENV PORT=30120
 # =================== #
 
 # ==== Paquets ==== #
@@ -16,6 +16,7 @@ RUN apt-get update &&\
     apt-get install -y wget &&\
     apt-get install -y unzip &&\
     apt-get install -y make &&\
+    apt-get install -y screen &&\
     apt install -y bzip2 &&\
     apt install -y g++ &&\
     apt install -y cmake &&\
