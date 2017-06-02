@@ -38,15 +38,17 @@ echo "#######################################"
 cert-sync /etc/ssl/certs/ca-certificates.crt
 cert-sync --user /etc/ssl/certs/ca-certificates.crt
 cd ..
-else
-  echo 'mono is installed'
-fi
+
 echo "#######################################"
 echo "#  Récuperation du serveur GTA depuis #"
 echo "#   notre CDN                         #"
 echo "#######################################"
 wget https://cdn.privateheberg.com/GTA/serveur-gta.zip && unzip serveur-gta.zip && rm serveur-gta.zip && chmod 777 -R serveur-gta && cd serveur-gta
 chmod 777 PHgta.sh
+else
+  echo 'mono is installed'
+fi
+
 echo "#######################################"
 echo "#   Le serveur démarre.               #"
 echo "#   Vous utiliser actuellement la     #"
